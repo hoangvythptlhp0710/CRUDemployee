@@ -4,6 +4,7 @@ package com.example.demo.controller;
 import com.example.demo.models.Employee;
 import com.example.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class EmployeeController {
     }
 
     //API update employee
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Employee updateEmployee(@RequestParam("id") long id, @RequestBody Employee employee){
         return employeeService.updateEmployee(id, employee);
     }

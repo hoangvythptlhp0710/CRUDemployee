@@ -1,12 +1,14 @@
 package com.example.demo.models;
 
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "employee")
 public class Employee {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
