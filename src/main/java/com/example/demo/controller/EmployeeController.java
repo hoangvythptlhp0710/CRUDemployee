@@ -42,4 +42,10 @@ public class EmployeeController {
     public List<Employee> getAllEmployee(){
         return employeeService.getAllEmployee();
     }
+
+    //API get employee by id
+    @GetMapping("/getById/{id}")
+    public Employee getEmployeeById(@PathVariable("id") long id){
+        return employeeService.getEmployeeById(id);
+    }
 }

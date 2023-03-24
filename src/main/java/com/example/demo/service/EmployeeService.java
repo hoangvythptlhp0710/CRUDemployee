@@ -18,6 +18,6 @@ public interface EmployeeService {
     //ham lay ra danh sach nhan vien
     public List<Employee> getAllEmployee();
 
-    public Employee getEmployee(long id);
+    public Employee getEmployeeById(long id);
 
 }

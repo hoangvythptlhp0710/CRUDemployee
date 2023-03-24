@@ -3,6 +3,7 @@
     <property name="project.name" value="CRUDEmployee"/>
     <property name="maven.home" value="/opt/apache-maven-3.8.7"/>
     <property name="src.dir" value="src/main/java"/>
+    <property name="test.src.dir" value="src/test/java"/>
     <property name="build.dir" value="target"/>
 
     <target name="clean">
@@ -31,12 +32,5 @@
     <target name="build" depends="clean, compile, package">
         <echo message="Build complete."/>
     </target>
-
-<!--    <target name="war" depends="compile">-->
-<!--        <war destfile="target/myapp.war" webxml="web/WEB-INF/web.xml">-->
-<!--            <fileset dir="build/classes"/>-->
-<!--            <fileset dir="web"/>-->
-<!--        </war>-->
-<!--    </target>-->
 
 </project>
