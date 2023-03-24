@@ -32,11 +32,11 @@
         <echo message="Build complete."/>
     </target>
 
-    <target name="war" depends="compile">
-        <war destfile="target/myapp.war" webxml="web/WEB-INF/web.xml">
-            <fileset dir="build/classes"/>
-            <fileset dir="web"/>
-        </war>
-    </target>
+<!--    <target name="war" depends="compile">-->
+<!--        <war destfile="target/myapp.war" webxml="web/WEB-INF/web.xml">-->
+<!--            <fileset dir="build/classes"/>-->
+<!--            <fileset dir="web"/>-->
+<!--        </war>-->
+<!--    </target>-->
 
 </project>
