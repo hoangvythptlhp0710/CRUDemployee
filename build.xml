@@ -1,0 +1,30 @@
+<project name="CRUDEmployee" default="build" basedir=".">
+
+    <property name="project.name" value="CRUDEmployee"/>
+    <property name="maven.home" value="/opt/apache-maven-3.8.7"/>
+    <property name="src.dir" value="src/main/java"/>
+    <property name="build.dir" value="target"/>
+
+    <target name="clean">
+        <exec executable="${maven.home}/bin/mvn">
+            <arg value="clean"/>
+        </exec>
+    </target>
+
+    <target name="compile">
+        <exec executable="${maven.home}/bin/mvn">
+            <arg value="compile"/>
+        </exec>
+    </target>
+
+    <target name="package">
+        <exec executable="${maven.home}/bin/mvn">
+            <arg value="package" />
+        </exec>
+    </target>
+
+    <target name="build" depends="clean, compile, package">
+        <echo message="Build complete."/>
+    </target>
+
+</project>
