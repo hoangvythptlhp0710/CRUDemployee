@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'mvn test..'
+                echo 'mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying..'
+                sh 'docker build -t myapp .'
             }
         }
             
