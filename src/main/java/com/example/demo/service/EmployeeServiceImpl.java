@@ -5,7 +5,9 @@ import com.example.demo.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -55,6 +57,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee getEmployeeById(long id) {
         return employeeRepository.getById(id);
+    }
+
+
+    public List<Employee> sortEmployee() {
+        List<Employee> allEmployee = getAllEmployee().stream().sorted(Comparator.comparing(Employee::getName)).toList();
+        return allEmployee;
     }
 
 }
