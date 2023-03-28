@@ -70,6 +70,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         return allEmployee;
     }
 
+    public List<Employee> sortEmployeeBySalary() {
+        List<Employee> allEmployee = getAllEmployee().stream().sorted(Comparator.comparing(Employee::getName)).toList();
+        return allEmployee;
+    }
+
 }
 
 
