@@ -71,7 +71,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public List<Employee> sortEmployeeByAddressAndName() {
-        List<Employee> allEmployee = getAllEmployee().stream().sorted(Comparator.comparing(Employee::getAddress).thenComparing(Employee::getName)).toList();
+        List<Employee> allEmployee = getAllEmployee().stream().sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getAddress)).toList();
         return allEmployee;
     }
 
